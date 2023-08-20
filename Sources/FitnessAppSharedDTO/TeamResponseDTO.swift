@@ -14,7 +14,7 @@ public struct TeamResponseDTO: Codable {
     public var captainUserId: UUID
     public var title: String
     
-    init(id: UUID, challengeId: UUID, captainUserId: UUID, title: String) {
+    public init(id: UUID, challengeId: UUID, captainUserId: UUID, title: String) {
         self.id = id
         self.challengeId = challengeId
         self.captainUserId = captainUserId

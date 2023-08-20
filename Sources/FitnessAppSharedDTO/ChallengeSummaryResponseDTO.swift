@@ -12,7 +12,7 @@ public struct Teammate: Codable {
     public var username: String
     public var dailyPointsEarned: Int
     
-    init(username: String, dailyPointsEarned: Int) {
+    public init(username: String, dailyPointsEarned: Int) {
         self.username = username
         self.dailyPointsEarned = dailyPointsEarned
     }
@@ -27,7 +27,7 @@ public struct ChallengeSummaryResponseDTO: Codable {
     public var teamTotalPointsEarned: Double
     public var teammates: [Teammate]
     
-    init(teamId: UUID? = nil, teamTitle: String? = nil, teamDailyPointsEarned: Double, teamTotalPointsEarned: Double, teammates: [Teammate]) {
+    public init(teamId: UUID? = nil, teamTitle: String? = nil, teamDailyPointsEarned: Double, teamTotalPointsEarned: Double, teammates: [Teammate]) {
         self.teamId = teamId
         self.teamTitle = teamTitle
         self.teamDailyPointsEarned = teamDailyPointsEarned

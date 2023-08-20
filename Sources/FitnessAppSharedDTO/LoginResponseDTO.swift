@@ -14,7 +14,7 @@ public struct LoginResponseDTO: Codable {
     public var userId: UUID? = nil
     public var token: String? = nil
     
-    init(error: Bool, reason: String? = nil, userId: UUID? = nil, token: String? = nil) {
+    public init(error: Bool, reason: String? = nil, userId: UUID? = nil, token: String? = nil) {
         self.error = error
         self.reason = reason
         self.userId = userId

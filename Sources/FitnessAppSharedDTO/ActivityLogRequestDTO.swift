@@ -11,7 +11,7 @@ public struct ActivityLogRequestDTO: Codable {
     
     public var caloriesBurned: Int
     
-    init(caloriesBurned: Int) {
+    public init(caloriesBurned: Int) {
         self.caloriesBurned = caloriesBurned
     }
     

@@ -13,7 +13,7 @@ public struct RegisterResponseDTO: Codable {
     public var reason: String?
     public var userId: UUID?
     
-    init(error: Bool, reason: String? = nil, userId: UUID? = nil) {
+    public init(error: Bool, reason: String? = nil, userId: UUID? = nil) {
         self.error = error
         self.reason = reason
         self.userId = userId

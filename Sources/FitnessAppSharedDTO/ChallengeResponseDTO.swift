@@ -16,7 +16,7 @@ public struct ChallengeResponseDTO: Codable {
     public var endDate: Date
     public var caloriesPerPoint: Int
     
-    init(id: UUID, adminUserId: UUID, title: String, startDate: Date, endDate: Date, caloriesPerPoint: Int) {
+    public init(id: UUID, adminUserId: UUID, title: String, startDate: Date, endDate: Date, caloriesPerPoint: Int) {
         self.id = id
         self.adminUserId = adminUserId
         self.title = title
