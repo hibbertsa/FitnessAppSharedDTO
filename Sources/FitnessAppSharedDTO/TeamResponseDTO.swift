@@ -9,10 +9,10 @@ import Foundation
 
 public struct TeamResponseDTO: Codable {
     
-    public var id: UUID
-    public var challengeId: UUID
-    public var captainUserId: UUID
-    public var title: String
+    public let id: UUID
+    public let challengeId: UUID
+    public let captainUserId: UUID
+    public let title: String
     
     public init(id: UUID, challengeId: UUID, captainUserId: UUID, title: String) {
         self.id = id

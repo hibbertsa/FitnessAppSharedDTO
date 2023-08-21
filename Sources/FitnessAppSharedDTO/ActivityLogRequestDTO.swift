@@ -9,7 +9,7 @@ import Foundation
 
 public struct ActivityLogRequestDTO: Codable {
     
-    public var caloriesBurned: Int
+    public let caloriesBurned: Int
     
     public init(caloriesBurned: Int) {
         self.caloriesBurned = caloriesBurned

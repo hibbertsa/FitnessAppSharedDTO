@@ -9,10 +9,10 @@ import Foundation
 
 public struct ChallengeRequestDTO: Codable {
     
-    public var title: String
-    public var startDate: Date
-    public var endDate: Date
-    public var caloriesPerPoint: Int
+    public let title: String
+    public let startDate: Date
+    public let endDate: Date
+    public let caloriesPerPoint: Int
     
     public init(title: String, startDate: Date, endDate: Date, caloriesPerPoint: Int) {
         self.title = title

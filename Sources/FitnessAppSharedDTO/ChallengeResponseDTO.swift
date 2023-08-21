@@ -9,12 +9,12 @@ import Foundation
 
 public struct ChallengeResponseDTO: Codable {
     
-    public var id: UUID
-    public var adminUserId: UUID
-    public var title: String
-    public var startDate: Date
-    public var endDate: Date
-    public var caloriesPerPoint: Int
+    public let id: UUID
+    public let adminUserId: UUID
+    public let title: String
+    public let startDate: Date
+    public let endDate: Date
+    public let caloriesPerPoint: Int
     
     public init(id: UUID, adminUserId: UUID, title: String, startDate: Date, endDate: Date, caloriesPerPoint: Int) {
         self.id = id
