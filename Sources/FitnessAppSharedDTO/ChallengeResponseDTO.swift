@@ -18,7 +18,7 @@ public struct ChallengeResponseDTO: Codable {
     public let endDate: Date?
     public let caloriesPerPoint: Int?
     
-    public init(error: Bool, reason: String?, id: UUID, adminUserId: UUID, title: String, startDate: Date, endDate: Date, caloriesPerPoint: Int) {
+    public init(error: Bool, reason: String? = nil, id: UUID? = nil, adminUserId: UUID? = nil, title: String? = nil, startDate: Date? = nil, endDate: Date? = nil, caloriesPerPoint: Int? = nil) {
         self.error = error
         self.reason = reason
         self.id = id
