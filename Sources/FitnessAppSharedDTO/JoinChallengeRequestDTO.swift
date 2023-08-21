@@ -11,7 +11,7 @@ public struct JoinChallengeRequestDTO: Codable {
     
     public let joinCode: String
     
-    init(joinCode: String) {
+    public init(joinCode: String) {
         self.joinCode = joinCode
     }
     
