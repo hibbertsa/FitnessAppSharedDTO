@@ -10,15 +10,17 @@ import Foundation
 public struct ChallengeResponseDTO: Codable {
     
     public let error: Bool
-    public var reason: String?
-    public let id: UUID?
-    public let adminUserId: UUID?
-    public let title: String?
-    public let startDate: Date?
-    public let endDate: Date?
-    public let caloriesPerPoint: Int?
+    public var reason: String? = nil
+    public var id: UUID? = nil
+    public var adminUserId: UUID? = nil
+    public var title: String? = nil
+    public var startDate: Date? = nil
+    public var endDate: Date? = nil
+    public var caloriesPerPoint: Int? = nil
+    public var numOfParticipants: Int? = nil
+    public var numOfTeams: Int? = nil
     
-    public init(error: Bool, reason: String? = nil, id: UUID? = nil, adminUserId: UUID? = nil, title: String? = nil, startDate: Date? = nil, endDate: Date? = nil, caloriesPerPoint: Int? = nil) {
+    public init(error: Bool, reason: String? = nil, id: UUID? = nil, adminUserId: UUID? = nil, title: String? = nil, startDate: Date? = nil, endDate: Date? = nil, caloriesPerPoint: Int? = nil, numOfParticipants: Int? = nil, numOfTeams: Int? = nil) {
         self.error = error
         self.reason = reason
         self.id = id
@@ -27,6 +29,8 @@ public struct ChallengeResponseDTO: Codable {
         self.startDate = startDate
         self.endDate = endDate
         self.caloriesPerPoint = caloriesPerPoint
+        self.numOfParticipants = numOfParticipants
+        self.numOfTeams = numOfTeams
     }
     
 }
