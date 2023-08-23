@@ -10,14 +10,14 @@ import Foundation
 public struct ActivityLogResponseDTO: Codable {
     
     public let id: UUID
-    public let participantId: UUID
+    public let participant: ParticipantResponseDTO
     public let date: Date
     public let caloriesBurned: Int
     public let pointsEarned: Int
     
-    public init(id: UUID, participantId: UUID, date: Date, caloriesBurned: Int, pointsEarned: Int) {
+    public init(id: UUID, participant: ParticipantResponseDTO, date: Date, caloriesBurned: Int, pointsEarned: Int) {
         self.id = id
-        self.participantId = participantId
+        self.participant = participant
         self.date = date
         self.caloriesBurned = caloriesBurned
         self.pointsEarned = pointsEarned
