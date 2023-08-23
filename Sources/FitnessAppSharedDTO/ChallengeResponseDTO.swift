@@ -22,8 +22,9 @@ public struct ChallengeResponseDTO: Codable {
     public var numOfTeams: Int? = nil
     public var dailyPointsEarned: Int? = nil
     public var totalPointsEarned: Int? = nil
+    public var myTeamDailyActivityLogs: [ActivityLogResponseDTO]? = []
     
-    public init(error: Bool, reason: String? = nil, id: UUID? = nil, adminUserId: UUID? = nil, title: String? = nil, startDate: Date? = nil, endDate: Date? = nil, caloriesPerPoint: Int? = nil, joinCode: String? = nil, numOfParticipants: Int? = nil, numOfTeams: Int? = nil, dailyPointsEarned: Int? = nil, totalPointsEarned: Int? = nil) {
+    public init(error: Bool, reason: String? = nil, id: UUID? = nil, adminUserId: UUID? = nil, title: String? = nil, startDate: Date? = nil, endDate: Date? = nil, caloriesPerPoint: Int? = nil, joinCode: String? = nil, numOfParticipants: Int? = nil, numOfTeams: Int? = nil, dailyPointsEarned: Int? = nil, totalPointsEarned: Int? = nil, myTeamDailyActivityLogs: [ActivityLogResponseDTO]? = nil) {
         self.error = error
         self.reason = reason
         self.id = id
@@ -37,6 +38,7 @@ public struct ChallengeResponseDTO: Codable {
         self.numOfTeams = numOfTeams
         self.dailyPointsEarned = dailyPointsEarned
         self.totalPointsEarned = totalPointsEarned
+        self.myTeamDailyActivityLogs = myTeamDailyActivityLogs
     }
     
 }
