@@ -10,17 +10,13 @@ import Foundation
 public struct TeamResponseDTO: Codable {
     
     public let id: UUID
-    public let challenge: ChallengeResponseDTO
     public let captain: UserResponseDTO
     public let title: String
-    public let participants: [ParticipantResponseDTO]
     
-    public init(id: UUID, challenge: ChallengeResponseDTO, captain: UserResponseDTO, title: String, participants: [ParticipantResponseDTO]) {
+    public init(id: UUID, captain: UserResponseDTO, title: String) {
         self.id = id
-        self.challenge = challenge
         self.captain = captain
         self.title = title
-        self.participants = participants
     }
     
 }
