@@ -9,36 +9,26 @@ import Foundation
 
 public struct ChallengeResponseDTO: Codable {
     
-    public let error: Bool
-    public var reason: String? = nil
-    public var id: UUID? = nil
-    public var adminUserId: UUID? = nil
-    public var title: String? = nil
-    public var startDate: Date? = nil
-    public var endDate: Date? = nil
-    public var caloriesPerPoint: Int? = nil
-    public var joinCode: String? = nil
-    public var numOfParticipants: Int? = nil
-    public var numOfTeams: Int? = nil
-    public var dailyPointsEarned: Int? = nil
-    public var totalPointsEarned: Int? = nil
-    public var myTeamDailyActivityLogs: [ActivityLogResponseDTO]? = nil
+    public let id: UUID
+    public let admin: UserResponseDTO
+    public let joinCode: String
+    public let title: String
+    public let startDate: Date
+    public let endDate: Date
+    public let caloriesPerPoint: Int
+    public let participants: [ParticipantResponseDTO]
+    public let teams: [TeamResponseDTO]
     
-    public init(error: Bool, reason: String? = nil, id: UUID? = nil, adminUserId: UUID? = nil, title: String? = nil, startDate: Date? = nil, endDate: Date? = nil, caloriesPerPoint: Int? = nil, joinCode: String? = nil, numOfParticipants: Int? = nil, numOfTeams: Int? = nil, dailyPointsEarned: Int? = nil, totalPointsEarned: Int? = nil, myTeamDailyActivityLogs: [ActivityLogResponseDTO]? = nil) {
-        self.error = error
-        self.reason = reason
+    public init(id: UUID, admin: UserResponseDTO, joinCode: String, title: String, startDate: Date, endDate: Date, caloriesPerPoint: Int, participants: [ParticipantResponseDTO], teams: [TeamResponseDTO]) {
         self.id = id
-        self.adminUserId = adminUserId
+        self.admin = admin
+        self.joinCode = joinCode
         self.title = title
         self.startDate = startDate
         self.endDate = endDate
         self.caloriesPerPoint = caloriesPerPoint
-        self.joinCode = joinCode
-        self.numOfParticipants = numOfParticipants
-        self.numOfTeams = numOfTeams
-        self.dailyPointsEarned = dailyPointsEarned
-        self.totalPointsEarned = totalPointsEarned
-        self.myTeamDailyActivityLogs = myTeamDailyActivityLogs
+        self.participants = participants
+        self.teams = teams
     }
     
 }
