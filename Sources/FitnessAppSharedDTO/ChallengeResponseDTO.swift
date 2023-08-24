@@ -18,7 +18,7 @@ public struct ChallengeResponseDTO: Codable {
     public let caloriesPerPoint: Int
     public let participants: [ParticipantResponseDTO]
     public let teams: [TeamResponseDTO]
-    public var scoreboard: [ScorecardResponseDTO]
+    public let scoreboard: [ScorecardResponseDTO]
     
     public init(id: UUID, admin: UserResponseDTO, joinCode: String, title: String, startDate: Date, endDate: Date, caloriesPerPoint: Int, participants: [ParticipantResponseDTO], teams: [TeamResponseDTO], scoreboard: [ScorecardResponseDTO]) {
         self.id = id
