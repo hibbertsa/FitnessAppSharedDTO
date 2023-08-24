@@ -12,13 +12,13 @@ public struct ParticipantResponseDTO: Codable {
     public let id: UUID
     public let user: UserResponseDTO
     public let activityLogs: [ActivityLogResponseDTO]
-    public var teamId: UUID? = nil
+    public var team: TeamResponseDTO? = nil
     
-    public init(id: UUID, user: UserResponseDTO, activityLogs: [ActivityLogResponseDTO], teamId: UUID? = nil) {
+    public init(id: UUID, user: UserResponseDTO, activityLogs: [ActivityLogResponseDTO], team: TeamResponseDTO? = nil) {
         self.id = id
         self.user = user
         self.activityLogs = activityLogs
-        self.teamId = teamId
+        self.team = team
     }
     
 }
