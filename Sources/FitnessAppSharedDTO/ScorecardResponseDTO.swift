@@ -9,7 +9,7 @@ import Foundation
 
 public struct ScorecardResponseDTO: Codable {
     
-    public let id = UUID()
+    public var id = UUID()
     public let username: String
     public let teamTitle: String?
     public let dailyCaloriesBurned: Int
