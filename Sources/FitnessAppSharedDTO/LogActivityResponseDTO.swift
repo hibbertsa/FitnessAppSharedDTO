@@ -11,12 +11,10 @@ public struct LogActivityResponseDTO: Codable {
     
     public let error: Bool
     public var reason: String? = nil
-    public var activityLog: ActivityLogResponseDTO? = nil
     
-    public init(error: Bool, reason: String? = nil, activityLog: ActivityLogResponseDTO? = nil) {
+    public init(error: Bool, reason: String? = nil) {
         self.error = error
         self.reason = reason
-        self.activityLog = activityLog
     }
     
 }
