@@ -11,9 +11,9 @@ public struct ParticipantResponseDTO: Codable {
     
     public let id: UUID
     public let user: UserResponseDTO
-    public let activityLogs: [ActivityLogResponseDTO]
+    public var activityLogs: [ActivityLogResponseDTO]? = nil
     
-    public init(id: UUID, user: UserResponseDTO, activityLogs: [ActivityLogResponseDTO]) {
+    public init(id: UUID, user: UserResponseDTO, activityLogs: [ActivityLogResponseDTO]? = nil) {
         self.id = id
         self.user = user
         self.activityLogs = activityLogs
