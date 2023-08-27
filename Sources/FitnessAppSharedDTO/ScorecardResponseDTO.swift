@@ -10,15 +10,15 @@ import Foundation
 public struct ScorecardResponseDTO: Codable {
     
     public var id = UUID()
-    public let username: String
+    public let participant: ParticipantResponseDTO
     public let dailyCaloriesBurned: Int
     public let dailyPointsEarned: Int
     public let totalCaloriesBurned: Int
     public let totalPointsEarned: Int
     
-    public init(id: UUID = UUID(), username: String, dailyCaloriesBurned: Int, dailyPointsEarned: Int, totalCaloriesBurned: Int, totalPointsEarned: Int) {
+    public init(id: UUID = UUID(), participant: ParticipantResponseDTO, dailyCaloriesBurned: Int, dailyPointsEarned: Int, totalCaloriesBurned: Int, totalPointsEarned: Int) {
         self.id = id
-        self.username = username
+        self.participant = participant
         self.dailyCaloriesBurned = dailyCaloriesBurned
         self.dailyPointsEarned = dailyPointsEarned
         self.totalCaloriesBurned = totalCaloriesBurned
