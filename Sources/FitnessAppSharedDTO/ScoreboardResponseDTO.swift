@@ -13,11 +13,10 @@ public struct ScoreboardResponseDTO: Codable {
     public var myScorecard: ScorecardResponseDTO? = nil
     public var myTeamScorecards: [ScorecardResponseDTO]? = nil
     
-    public init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.allScorecards = try container.decode([ScorecardResponseDTO].self, forKey: .allScorecards)
-        self.myScorecard = try container.decodeIfPresent(ScorecardResponseDTO.self, forKey: .myScorecard)
-        self.myTeamScorecards = try container.decodeIfPresent([ScorecardResponseDTO].self, forKey: .myTeamScorecards)
+    public init(allScorecards: [ScorecardResponseDTO], myScorecard: ScorecardResponseDTO? = nil, myTeamScorecards: [ScorecardResponseDTO]? = nil) {
+        self.allScorecards = allScorecards
+        self.myScorecard = myScorecard
+        self.myTeamScorecards = myTeamScorecards
     }
     
 }
