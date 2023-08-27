@@ -11,15 +11,14 @@ public struct ScorecardResponseDTO: Codable {
     
     public var id = UUID()
     public let username: String
-    public let teamTitle: String?
     public let dailyCaloriesBurned: Int
     public let dailyPointsEarned: Int
     public let totalCaloriesBurned: Int
     public let totalPointsEarned: Int
     
-    public init(username: String, teamTitle: String?, dailyCaloriesBurned: Int, dailyPointsEarned: Int, totalCaloriesBurned: Int, totalPointsEarned: Int) {
+    public init(id: UUID = UUID(), username: String, dailyCaloriesBurned: Int, dailyPointsEarned: Int, totalCaloriesBurned: Int, totalPointsEarned: Int) {
+        self.id = id
         self.username = username
-        self.teamTitle = teamTitle
         self.dailyCaloriesBurned = dailyCaloriesBurned
         self.dailyPointsEarned = dailyPointsEarned
         self.totalCaloriesBurned = totalCaloriesBurned
