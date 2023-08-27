@@ -16,11 +16,12 @@ public struct ChallengeResponseDTO: Codable {
     public let startDate: Date
     public let endDate: Date
     public let caloriesPerPoint: Int
+    public let teamBased: Bool
     public let participants: [ParticipantResponseDTO]
     public let teams: [TeamResponseDTO]
     public let scoreboard: ScoreboardResponseDTO
     
-    public init(id: UUID, admin: UserResponseDTO, joinCode: String, title: String, startDate: Date, endDate: Date, caloriesPerPoint: Int, participants: [ParticipantResponseDTO], teams: [TeamResponseDTO], scoreboard: ScoreboardResponseDTO) {
+    public init(id: UUID, admin: UserResponseDTO, joinCode: String, title: String, startDate: Date, endDate: Date, caloriesPerPoint: Int, teamBased: Bool, participants: [ParticipantResponseDTO], teams: [TeamResponseDTO], scoreboard: ScoreboardResponseDTO) {
         self.id = id
         self.admin = admin
         self.joinCode = joinCode
@@ -28,6 +29,7 @@ public struct ChallengeResponseDTO: Codable {
         self.startDate = startDate
         self.endDate = endDate
         self.caloriesPerPoint = caloriesPerPoint
+        self.teamBased = teamBased
         self.participants = participants
         self.teams = teams
         self.scoreboard = scoreboard
