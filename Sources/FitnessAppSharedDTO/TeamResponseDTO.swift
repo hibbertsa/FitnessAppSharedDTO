@@ -12,10 +12,10 @@ public struct TeamResponseDTO: Codable {
     public let id: UUID
     public let captain: UserResponseDTO
     public let title: String
-    public var members: [ParticipantResponseDTO]? = nil
+    public var members: [ParticipantResponseDTO]
     public let scorecard: ScorecardResponseDTO
     
-    public init(id: UUID, captain: UserResponseDTO, title: String, members: [ParticipantResponseDTO]? = nil, scorecard: ScorecardResponseDTO) {
+    public init(id: UUID, captain: UserResponseDTO, title: String, members: [ParticipantResponseDTO], scorecard: ScorecardResponseDTO) {
         self.id = id
         self.captain = captain
         self.title = title
