@@ -24,3 +24,4 @@ public struct ChallengeRequestDTO: Codable {
     }
     
 }
+
